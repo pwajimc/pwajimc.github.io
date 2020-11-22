@@ -13,7 +13,6 @@ async function registraServiceWorker() {
     // Registro correcto y se muestra en la consola.
     console.log("Service Worker registrado.");
     console.log(registro);
-    
   } catch (e) {
     // Hubo un error en el registro.
     muestraError(e);
