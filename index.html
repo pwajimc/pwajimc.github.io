@@ -51,10 +51,10 @@
           --color-control-sin-foco: pink;
           --color-control-con-foco: #03a9f4;
           --color-control-error: #2600b0;
-          --color-control-fondo: #eeeeee;
+          --color-control-fondo: #f1bff8;
           --color-active: #4646462c;
-          /** Los 2 primeros fonts son para apple y "monospace" es para Android. */
-          --font-family: -apple-system, BlinkMacSystemFont, monospace, sans-serif;
+          /** Los 2 primeros fonts son para apple y "sans-serif" es para Android. */
+          --font-family: -apple-system, BlinkMacSystemFont, sans-serif, monospace;
           /* Uso de la custom property "--color-contenido". */
           color: var(--color-contenido);
           background-color: var(--color-contenido-fondo);
@@ -62,7 +62,7 @@
         }
   
         body {
-          margin: 0;
+          margin: 1;
         }
   
         header {
@@ -85,7 +85,7 @@
         .toolbar h1 {
           margin: 0 auto 0 0;
           padding: 0;
-          font-size: 1.25rem;
+          font-size: 2.25rem;
         }
   
         body.ios .toolbar h1 {
@@ -263,7 +263,7 @@
     <form action="javascript:;">
       <header>
         <div class="toolbar">
-          <h1>M.R.U.</h1>
+          <center><h1>Fórmula</h1></center>
 
           <span class="acciones">
             <button onclick="calcular();"><span class="material-icons">save</span></button>
@@ -272,28 +272,22 @@
         </div>
       </header>
       <div class="contenido">
-        <center><p><b>Movimiento Rectilíneo Uniforme: <output id="agent"></output></b></p>
-        <p>Un movimiento es rectilíneo cuando un objeto describe una trayectoria recta a velocidad constante, dado que su aceleración es nula.​</p>
-         <b>Fórmula: s=s0+v*t</b>
-         <p>s = posición final</p></center>
+        <center><p><b>Ley de Ohm<output id="agent"></output></b></p>
+        <p>Está fórmula se usa para determinar la relación entre tensión, corriente y resistencia en un circuito eléctrico.​</p>
+         <b>Fórmula: E = I * R</b>
+         <p>E = Tensión (V)</p></center>
 
         <campo-dinámico>
           <input type="text" id="s0" required pattern="[0-9]" title="Ingresa solo números enteros"/>
 
-          <label for="s0">s0: Posición inicial (m)</label>
+          <label for="s0">I = Corriente (A) (</label>
           <small>Requerido</small>
-        </campo-dinámico>
-
-        <campo-dinámico>
-          <input type="text" id="v" required pattern="[0-9]" title="Ingresa solo números enteros"/>
-          <!-- <input id="email" type="email" autocomplete="off"> -->
-          <label for="v">v: Velocidad (m/s)</label>
         </campo-dinámico>
 
         <campo-dinámico>
           <input type="text" id="t" required pattern="[0-9]" title="Ingresa solo números enteros"/>
           <!-- <input id="email" type="email" autocomplete="off"> -->
-          <label for="t">t: Intervalo de tiempo (s)</label>
+          <label for="t">R = Resistencia (Ω)</label>
         </campo-dinámico>      
       </div>
       
@@ -302,11 +296,10 @@
  <script>
      
      function calcular() {
-       var n1 = parseInt(document.getElementById('s0').value);
-       var n2 = parseInt(document.getElementById('v').value);
-       var n3 = parseInt(document.getElementById('t').value);
-       var res = (n1 + n2) * n3;
-       alert('La posición final es: '+ res +' mts.');
+       var n1 = parseInt(document.getElementById('I').value);
+       var n2 = parseInt(document.getElementById('R').value);
+       var res = n1 * n2;
+       alert('La tensión es: '+ res +' voltios.');
      }
      
  </script> 
